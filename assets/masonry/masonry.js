@@ -1,21 +1,12 @@
-// $(document).ready(function () {
-//     $('.grid').masonry({
-//         itemSelector: '.grid-item',
-//         columnWidth: '.grid-sizer',
-//         percentPosition: true
-//     });
-//
-//     //
-//     // $grid.imagesLoaded().progress( function() {
-//     //     $grid.masonry();
-//     // });
-// });
+$(document).ready(function () {
+    $('.grid').masonry({
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-sizer',
+        percentPosition: true,
+        gutter: '.gutter-sizer'
+    });
 
-const $grid = jQuery('.grid').masonry({
-    itemSelector: '.grid-item',
-    percentPosition: true,
-    columnWidth: '.grid-sizer'
-});
-$grid.imagesLoaded().progress( function() {
-    $grid.masonry();
+    $grid.imagesLoaded().progress( function() {
+        $grid.masonry();
+    });
 });

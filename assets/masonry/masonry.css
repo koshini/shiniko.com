@@ -3,13 +3,7 @@
 /* force scrollbar */
 html { overflow-y: scroll; }
 
-body { font-family: sans-serif; }
-
 /* ---- grid ---- */
-
-.grid {
-    background: #DDD;
-}
 
 /* clear fix */
 .grid:after {
@@ -22,7 +16,15 @@ body { font-family: sans-serif; }
 
 .grid-sizer,
 .grid-item {
-    width: 33.333%;
+    width: 33%;
+    margin-bottom: 0.5%;
+}
+
+/*.grid-item--width2 { width:  40%; }*/
+/*.grid-item--width3 { width:  30%; }*/
+
+.gutter-sizer {
+    width: 0.5%;
 }
 
 .grid-item {
