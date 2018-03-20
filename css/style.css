@@ -1,11 +1,22 @@
-@import url('https://fonts.googleapis.com/css?family=Arvo|Amatic+SC|Audiowide|Lekton|Monoton|Poiret+One|Righteous|Share+Tech+Mono|Special+Elite|Unica+One|VT323');
+@import url('https://fonts.googleapis.com/css?family=Molengo|Lekton');
 
+iframe {
+    border-width: 0;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
+
+.margin {
+    margin-left: 5%;
+    margin-right: 5%;
+}
 
 .link {
     color: #FFFFFF;
     background-color: transparent;
     text-decoration: none;
-    font-family: Lekton;
+    font-family: 'Lekton', sans-serif;
   	font-size: 17px;
   	font-style: normal;
   	font-variant: normal;
@@ -18,21 +29,28 @@
     background-color: transparent;
 }
 
-.vt323 {
-  font-family: 'VT323', monospace;
-  font-size: 19px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: lighter;
-	line-height: 21px;
+.molengo-title {
+    font-family: 'Molengo', sans-serif;
+    font-size: 15vw;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: .1em;
 }
 
-.lekton {
+.molengo-subtitle {
+    font-family: 'Molengo', sans-serif;
+    font-size: 5vw;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: .6em;
+}
+
+.lekton, .lekton-quote {
   color: #FFFFFF;
   border-color: #FFFFFF;
   background-color: transparent;
-  font-family: Lekton;
-	font-size: 17px;
+    font-family: 'Lekton', sans-serif;
+	font-size: 18px;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 400;
@@ -44,7 +62,7 @@
   color: #FFFFFF;
   border-color: #FFFFFF;
   background-color: transparent;
-  font-family: Lekton;
+    font-family: 'Lekton', sans-serif;
 	font-size: 23px;
 	font-style: normal;
 	font-variant: normal;
@@ -52,11 +70,11 @@
 	line-height: 23px;
 }
 
-.lekton:hover {
+.lekton-quote:hover {
     color: #C0C0C0;
     background-color: transparent;
-    font-family: Lekton;
-  	font-size: 17px;
+    font-family: 'Lekton', sans-serif;
+  	font-size: 18px;
   	font-style: normal;
   	font-variant: normal;
   	font-weight: 400;
@@ -67,7 +85,7 @@
 .lekton-bold:hover {
   color: #C0C0C0;
   background-color: transparent;
-  font-family: Lekton;
+    font-family: 'Lekton', sans-serif;
 	font-size: 23px;
 	font-style: normal;
 	font-variant: normal;

@@ -20,6 +20,12 @@ html { overflow-y: scroll; }
     margin-bottom: 0.5%;
 }
 
+.grid-item--width2 {
+    width: 66%;
+    margin-bottom: 0.5%;
+}
+
+
 /*.grid-item--width2 { width:  40%; }*/
 /*.grid-item--width3 { width:  30%; }*/
 
@@ -27,11 +33,16 @@ html { overflow-y: scroll; }
     width: 0.5%;
 }
 
-.grid-item {
-    float: left;
-}
+/*.grid-item {*/
+    /*float: left;*/
+/*}*/
 
 .grid-item img {
+    display: block;
+    max-width: 100%;
+}
+
+.grid-item--width2 img {
     display: block;
     max-width: 100%;
 }

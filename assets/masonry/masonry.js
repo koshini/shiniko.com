@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.grid').masonry({
+    var $grid = $('.grid').masonry({
         itemSelector: '.grid-item',
         columnWidth: '.grid-sizer',
         percentPosition: true,
