@@ -6,8 +6,8 @@ var canvasHeight;
 
 
 function setup() {
-    canvasWidth = windowWidth - 10;
-    canvasHeight = windowHeight - 10;
+    canvasWidth = windowWidth;
+    canvasHeight = windowHeight;
     createCanvas(canvasWidth, canvasHeight);
     coef = canvasWidth / canvasHeight;
     pixelDensity(1);

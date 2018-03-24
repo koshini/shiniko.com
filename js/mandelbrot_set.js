@@ -5,7 +5,7 @@ var maxIterations = 50;
 
 
 function setup() {
-    createCanvas(windowWidth-100, windowHeight-100);
+    createCanvas(windowWidth, windowHeight);
     pixelDensity(1);
     yTranslate = height / 2 - width / 2;
 }
