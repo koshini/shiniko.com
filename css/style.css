@@ -25,6 +25,7 @@
 
 .nav a {
     display: none;
+    padding-left: 40px !important;
 }
 
 .openNav {
@@ -39,7 +40,6 @@
     overflow-x: hidden;
     transition: 0.2s;
     padding-top: 10px;
-    padding-left: 40px !important;
 }
 
 .openNav a {
