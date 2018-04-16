@@ -32,7 +32,7 @@
              data-interval="false">
 
             <div class="nav">
-                <a href="#" onclick="aboutOn()">About</a>
+                <!--<a href="#" onclick="aboutOn()">About</a>-->
                 <a href="#" onclick="contactOn()">Contact</a>
             </div>
 
@@ -264,6 +264,14 @@
     function contactOff() {
         document.getElementById("contactOverlay").style.display = "none";
     }
+
+    //Esc key closes overlay
+    $(document).keyup(function(e){
+        if (e.keyCode === 27){
+            document.getElementById("contactOverlay").style.display= "none";
+            document.getElementById("aboutOverlay").style.display= "none";
+        }
+    });
 </script>
 
 
