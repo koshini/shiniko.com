@@ -3,31 +3,40 @@ import styled from 'styled-components';
 import galleryImages from '../images';
 import Photo from './Photo';
 
+const Wrapper = styled.div`
+  perspective: 1px;
+  overflow-x: hidden;
+  overflow-y: auto;
+`;
+
 const ParallaxGroup = styled.div`
   height: 100vh;
-  width: 100%;
-  top: 0;
+  width: 100vw;
+  /* top: 70px; */
+  max-width: 1500px;
   margin: 0 auto;
+  margin-bottom: 20vmax;
   position: relative;
   display: grid;
   justify-content: center;
-  perspective: 1px;
   transform-style: preserve-3d;
-  overflow-x: hidden;
-  overflow-y: auto;
 `;
 
 class Photos extends Component {
   render() {
     return (
-      <ParallaxGroup>
-        {Object.keys(galleryImages).map(key => (
-          <Photo
-            image={galleryImages[key].image}
-            styles={galleryImages[key].styles}
-          />
+      <Wrapper>
+        {Object.keys(galleryImages).map(group => (
+          <ParallaxGroup>
+            {Object.keys(galleryImages[group]).map(item => (
+              <Photo
+                src={galleryImages[group][item].src}
+                styles={galleryImages[group][item].styles}
+              />
+            ))}
+          </ParallaxGroup>
         ))}
-      </ParallaxGroup>
+      </Wrapper>
     );
   }
 }
