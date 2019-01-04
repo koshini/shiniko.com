@@ -40,8 +40,6 @@ const galleryImages = {
     },
 
     image4: {
-      // name: 'leaves',
-      // src: '/assets/shiniko-1.jpg',
       styles: {
         position: 'center top',
         layer: 'top',
@@ -176,8 +174,6 @@ const galleryImages = {
     image2: {
       name: 'homedepot',
       src: '/assets/shiniko-16.jpg',
-      // name: 'books',
-      // src: '/assets/shiniko-17.jpg',
       styles: {
         position: 'right center',
         layer: 'middle',

@@ -5,6 +5,7 @@ import Nav from './Nav';
 import Intro from './Intro';
 import About from './About';
 import Photos from './Photos';
+import Grain from './Grain';
 
 const theme = {
   black: '#393939',
@@ -20,6 +21,7 @@ class App extends Component {
       <BrowserRouter>
         <ThemeProvider theme={theme}>
           <React.Fragment>
+            <Grain />
             <Nav />
             <Switch>
               <Route exact path="/" component={Intro} />
