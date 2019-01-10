@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Contact from './Contact';
 
 const OuterNav = styled.div`
+  font-size: 24px;
   padding: 48px 56px;
   position: fixed;
   z-index: 999;
@@ -38,12 +40,6 @@ const OuterNavBottom = styled.div`
   display: flex;
 `;
 
-const NavLink = ({ className, children }) => (
-  <Link to="/" className={className}>
-    {children}
-  </Link>
-);
-
 const NavElement = ({ className, children, url }) => (
   <Link className={className} to={url}>
     {children}
@@ -65,7 +61,7 @@ const NameTag = styled(NavElement)`
   transform-origin: bottom left;
 `;
 
-const ContactTag = styled(NavLink)`
+const ContactTag = styled.div`
   position: absolute;
   bottom: 0;
   right: 0;
@@ -96,7 +92,7 @@ class Nav extends Component {
           <NameTag className="NameTag" url="/">
             Shini Ko
           </NameTag>
-          <ContactTag className="ContactTag">Contact</ContactTag>
+          <Contact>Contact</Contact>
         </OuterNavBottom>
       </OuterNav>
     );

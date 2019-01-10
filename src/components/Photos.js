@@ -39,13 +39,17 @@ const TextContainer = styled.div`
     margin: 0;
 
     li {
-      color: ${props => props.theme.offwhite};
-      /* background-color: ${props => props.theme.black}; */
       height: 300vh;
       text-align: left;
       font-size: 50px;
       position: relative;
       list-style: none;
+
+      > p {
+        padding: 20px;
+        color: ${props => props.theme.offWhite};
+        background-color: ${props => props.theme.black};
+      }
     }
   }
 `;
@@ -74,24 +78,37 @@ class Photos extends Component {
       <Wrapper className="photo-gallery" onScroll={this.handleScroll}>
         <TextContainer>
           <ul>
-            <li>There is nothing that brings me more joy than creating.</li>
             <li>
-              I yearn for beauty in all forms; I want to blend art, engineering
-              together to break any stereotypical boundary.
+              <p>There is nothing that brings me more joy than creating.</p>
             </li>
             <li>
-              My creative outlets include coding, film photography, painting and
-              so on.
+              <p>
+                I yearn for beauty in all forms; I want to blend art,
+                engineering together to break any stereotypical boundary.
+              </p>
             </li>
             <li>
-              I believe that the notion of creativity extends beyond creating
-              art, and can be expressed through programming and problem solving.
+              <p>
+                My creative outlets include coding, film photography, painting
+                and so on.
+              </p>
             </li>
             <li>
-              This website is not a portfolio or blog. It is a space where I
-              share some of my creations and ideas.
+              <p>
+                I believe that the notion of creativity extends beyond creating
+                art, and can be expressed through programming and problem
+                solving.
+              </p>
             </li>
-            <li>Enjoy :)</li>
+            <li>
+              <p>
+                This website is not a portfolio or blog. It is a space where I
+                share some of my creations and ideas.
+              </p>
+            </li>
+            <li>
+              <p>Enjoy :)</p>
+            </li>
           </ul>
         </TextContainer>
         {Object.keys(galleryImages).map(group => (

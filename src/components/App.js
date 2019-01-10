@@ -8,12 +8,13 @@ import Photos from './Photos';
 import Grain from './Grain';
 
 const theme = {
-  black: '#393939',
+  black: '#222222',
   grey: '#3A3A3A',
   lightgrey: '#E1E1E1',
-  offWhite: '#EDEDED',
+  offWhite: '#fbf8f8',
   maxWidth: '1000px',
-  padding: '32px'
+  padding: '32px',
+  sidePadding: '100px'
 };
 
 class App extends Component {
