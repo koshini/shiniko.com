@@ -4,6 +4,7 @@ import galleryImages from '../images';
 import Photo from './Photo';
 
 const Wrapper = styled.div`
+  position: relative;
   perspective: 1px;
   overflow-x: hidden;
   overflow-y: auto;
@@ -12,20 +13,21 @@ const Wrapper = styled.div`
 `;
 
 const ParallaxGroup = styled.div`
-  position: relative;
   max-width: 1800px;
-  width: calc(100% - 100px);
+  width: calc(100% - 2 * 100px);
+  position: relative;
   margin: 0 auto;
   top: 70px;
   height: 200vh;
   margin-bottom: 100px;
   transform-style: preserve-3d;
-  margin: 0 auto;
 `;
 
 const TextContainer = styled.div`
   position: relative;
-  max-width: 980px;
+  height: 100%;
+  width: calc(100% - 2 * 100px);
+  max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
   top: 50vh;
   z-index: 10;
@@ -33,6 +35,7 @@ const TextContainer = styled.div`
   ul {
     position: absolute;
     width: 100%;
+    padding: 0;
     margin: 0;
 
     li {
@@ -48,9 +51,27 @@ const TextContainer = styled.div`
 `;
 
 class Photos extends Component {
+  state = {
+    height: 0
+  };
+
+  handleScroll = e => {
+    const children = e.target.childNodes;
+    var height = 0;
+    children.forEach(child => {
+      height = child.offsetHeight + height;
+    });
+
+    if (e.target.scrollTop >= height + 1000) {
+      this.props.toggleBottomVisibility(true);
+    } else {
+      this.props.toggleBottomVisibility(false);
+    }
+  };
+
   render() {
     return (
-      <Wrapper>
+      <Wrapper className="photo-gallery" onScroll={this.handleScroll}>
         <TextContainer>
           <ul>
             <li>There is nothing that brings me more joy than creating.</li>

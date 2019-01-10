@@ -12,6 +12,8 @@ const PageWrapper = styled.div`
   background-color: ${props => (props.dark ? 'palevioletred' : 'white')};
   > * {
     transform: translateY(-25vh);
+    width: calc(100% - 2 * 100px);
+    max-width: ${props => props.theme.maxWidth};
   }
 `;
 

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import NavMenu from './NavMenu';
-import NavElement from './NavElement';
 
 const OuterNav = styled.div`
   padding: 48px 56px;
@@ -17,8 +15,6 @@ const OuterNav = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-  /* background-color: aquamarine; */
-  /* opacity: 0.5; */
   box-sizing: border-box;
   > * {
     pointer-events: auto;
@@ -32,7 +28,6 @@ const OuterNavTop = styled.div`
   right: 0;
   width: 100%;
   display: flex;
-  /* background-color: burlywood; */
 `;
 
 const OuterNavBottom = styled.div`
@@ -41,7 +36,6 @@ const OuterNavBottom = styled.div`
   right: 0;
   width: 100%;
   display: flex;
-  /* background-color: burlywood; */
 `;
 
 const NavLink = ({ className, children }) => (
@@ -50,12 +44,20 @@ const NavLink = ({ className, children }) => (
   </Link>
 );
 
-const AboutTag = styled(NavLink)`
+const NavElement = ({ className, children, url }) => (
+  <Link className={className} to={url}>
+    {children}
+  </Link>
+);
+
+const AboutTag = styled(NavElement)`
   position: absolute;
   right: 0;
+  transform: rotate(-90deg);
+  transform-origin: top right;
 `;
 
-const NameTag = styled(NavLink)`
+const NameTag = styled(NavElement)`
   position: absolute;
   left: 0;
   bottom: 0;
@@ -68,7 +70,14 @@ const ContactTag = styled(NavLink)`
   bottom: 0;
   right: 0;
   transform: rotate(90deg);
-  transform-origin: top right;
+  transform-origin: bottom right;
+`;
+
+const ProjectsTag = styled(NavElement)`
+  position: absolute;
+  left: 0;
+  transform: rotate(90deg);
+  transform-origin: top left;
 `;
 
 class Nav extends Component {
@@ -76,12 +85,17 @@ class Nav extends Component {
     return (
       <OuterNav>
         <OuterNavTop>
-          {/* rotate these vertical */}
-          <NavLink>Projects</NavLink>
-          <AboutTag>About</AboutTag>
+          <ProjectsTag className="projects" url="/projects">
+            Projects
+          </ProjectsTag>
+          <AboutTag className="about" url="/about">
+            About
+          </AboutTag>
         </OuterNavTop>
         <OuterNavBottom>
-          <NameTag className="NameTag">Shini Ko</NameTag>
+          <NameTag className="NameTag" url="/">
+            Shini Ko
+          </NameTag>
           <ContactTag className="ContactTag">Contact</ContactTag>
         </OuterNavBottom>
       </OuterNav>
