@@ -3,10 +3,11 @@ import styled from 'styled-components';
 
 const Connect = styled.div`
   width: 100%;
-  margin-right: 1em;
+  margin-right: 2rem;
 `;
 
 const ContactCard = styled.div`
+  letter-spacing: 0.1em;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -14,27 +15,30 @@ const ContactCard = styled.div`
   transform: rotate(90deg);
   transform-origin: bottom right;
   pointer-events: auto;
-  background: bisque;
-  padding: 20px 20px 0 20px;
-
+  justify-content: center;
+  align-items: center;
+  border: black;
+  border-style: solid;
+  padding: 0;
+  margin: 0;
+  /* todo: fix padding issues */
   > ul {
-    /* transform: translateX(100%); */
-    display: none;
+    transform: rotate(-90deg);
     list-style: none;
     width: 100%;
-    margin: 0;
+    margin: auto;
     padding: 0;
+    /* display: none; */
 
     > li {
       flex: 1;
       width: 1em;
-      margin-right: 1em;
+      transform: rotate(90deg);
       display: flex;
       justify-content: center;
       align-items: center;
 
       > a {
-        color: ${props => props.theme.black};
         > img {
           max-width: 100%;
           height: auto;

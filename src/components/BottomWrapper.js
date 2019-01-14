@@ -7,13 +7,13 @@ const Wrapper = styled.div`
   bottom: 0;
   height: 100%;
   width: 100%;
-  background: palevioletred;
+  background: #e98074;
   z-index: -1;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 2s ease-out, transform 0.6s ease-out;
+  transition: opacity 2s ease-out;
 
   * {
     width: calc(100% - 2 * 100px);

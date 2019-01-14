@@ -4,8 +4,10 @@ import styled from 'styled-components';
 import Contact from './Contact';
 
 const OuterNav = styled.div`
-  font-size: 24px;
-  padding: 48px 56px;
+  font-size: 2.4rem;
+  font-weight: 700;
+  padding: 48px 64px;
+  text-transform: uppercase;
   position: fixed;
   z-index: 999;
   pointer-events: none;
@@ -18,7 +20,11 @@ const OuterNav = styled.div`
   justify-content: space-between;
   height: 100vh;
   box-sizing: border-box;
+  /* color: transparent; */
+
   > * {
+    /* -webkit-text-stroke: 1px ${props => props.theme.black};
+    color: transparent; */
     pointer-events: auto;
     position: relative;
   }
@@ -46,14 +52,39 @@ const NavElement = ({ className, children, url }) => (
   </Link>
 );
 
-const AboutTag = styled(NavElement)`
+const NavTag = styled(NavElement)`
+  letter-spacing: 0.1em;
+
+  &:before {
+    content: '';
+    height: 0.5rem;
+    background: ${props => props.theme.black};
+    width: 100%;
+    position: absolute;
+    bottom: -0.8rem;
+    display: block;
+    margin: 0 auto;
+    opacity: 0;
+    transition: all 0.4s ease-out;
+  }
+
+  &:hover:before {
+    opacity: 1;
+  }
+
+  /* &:hover {
+    color: ${props => props.theme.black};
+  } */
+`;
+
+const AboutTag = styled(NavTag)`
   position: absolute;
   right: 0;
   transform: rotate(-90deg);
   transform-origin: top right;
 `;
 
-const NameTag = styled(NavElement)`
+const NameTag = styled(NavTag)`
   position: absolute;
   left: 0;
   bottom: 0;
@@ -69,7 +100,7 @@ const ContactTag = styled.div`
   transform-origin: bottom right;
 `;
 
-const ProjectsTag = styled(NavElement)`
+const ProjectsTag = styled(NavTag)`
   position: absolute;
   left: 0;
   transform: rotate(90deg);
@@ -79,7 +110,7 @@ const ProjectsTag = styled(NavElement)`
 class Nav extends Component {
   render() {
     return (
-      <OuterNav>
+      <OuterNav className="OuterNav">
         <OuterNavTop>
           <ProjectsTag className="projects" url="/projects">
             Projects
