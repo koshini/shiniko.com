@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Connect = styled.div`
   width: 100%;
-  margin-right: 2rem;
+  margin-right: 3rem;
 `;
 
 const ContactCard = styled.div`
@@ -17,26 +17,40 @@ const ContactCard = styled.div`
   pointer-events: auto;
   justify-content: center;
   align-items: center;
-  border: black;
-  border-style: solid;
   padding: 0;
   margin: 0;
-  /* todo: fix padding issues */
+
+  &:before {
+    content: '';
+    height: 0.5rem;
+    background: ${props => props.theme.black};
+    width: 100%;
+    position: absolute;
+    bottom: -0.8rem;
+    display: block;
+    margin: 0 auto;
+    opacity: 0;
+    transition: all 0.4s ease-out;
+  }
+
+  &:hover:before {
+    opacity: 1;
+  }
+
   > ul {
-    transform: rotate(-90deg);
+    /* transform: rotate(180deg); */
     list-style: none;
     width: 100%;
     margin: auto;
     padding: 0;
-    /* display: none; */
 
     > li {
       flex: 1;
       width: 1em;
-      transform: rotate(90deg);
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      /* transform: rotate(180deg); */
+      margin-right: 1rem;
+      display: inline-flex;
+      transform: translateY(3px);
 
       > a {
         > img {
@@ -47,30 +61,18 @@ const ContactCard = styled.div`
       }
     }
   }
-
-  :hover {
-    > ul {
-      /* transition: all 0.8s ease-in-out; */
-      display: inline-flex;
-      /* transform: translateX(0); */
-    }
-
-    > div {
-      display: none;
-    }
-  }
 `;
 
 const LinkedinIcon = styled.img`
-  width: 1em;
+  width: 100%;
 `;
 
 const GithubIcon = styled.img`
-  width: 0.9em;
+  width: 95%;
 `;
 
 const EmailIcon = styled.img`
-  width: 0.8em;
+  width: 90%;
 `;
 
 class Contact extends Component {
@@ -97,20 +99,6 @@ class Contact extends Component {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              className="github"
-              href="https://github.com/koshini"
-            >
-              <GithubIcon
-                src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB3aWR0aD0iMTc5MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTY2NCA4OTZxMCAyNTEtMTQ2LjUgNDUxLjV0LTM3OC41IDI3Ny41cS0yNyA1LTM5LjUtN3QtMTIuNS0zMHYtMjExcTAtOTctNTItMTQyIDU3LTYgMTAyLjUtMTh0OTQtMzkgODEtNjYuNSA1My0xMDUgMjAuNS0xNTAuNXEwLTEyMS03OS0yMDYgMzctOTEtOC0yMDQtMjgtOS04MSAxMXQtOTIgNDRsLTM4IDI0cS05My0yNi0xOTItMjZ0LTE5MiAyNnEtMTYtMTEtNDIuNS0yN3QtODMuNS0zOC41LTg2LTEzLjVxLTQ0IDExMy03IDIwNC03OSA4NS03OSAyMDYgMCA4NSAyMC41IDE1MHQ1Mi41IDEwNSA4MC41IDY3IDk0IDM5IDEwMi41IDE4cS00MCAzNi00OSAxMDMtMjEgMTAtNDUgMTV0LTU3IDUtNjUuNS0yMS41LTU1LjUtNjIuNXEtMTktMzItNDguNS01MnQtNDkuNS0yNGwtMjAtM3EtMjEgMC0yOSA0LjV0LTUgMTEuNSA5IDE0IDEzIDEybDcgNXEyMiAxMCA0My41IDM4dDMxLjUgNTFsMTAgMjNxMTMgMzggNDQgNjEuNXQ2NyAzMCA2OS41IDcgNTUuNS0zLjVsMjMtNHEwIDM4IC41IDg5dC41IDU0cTAgMTgtMTMgMzB0LTQwIDdxLTIzMi03Ny0zNzguNS0yNzcuNXQtMTQ2LjUtNDUxLjVxMC0yMDkgMTAzLTM4NS41dDI3OS41LTI3OS41IDM4NS41LTEwMyAzODUuNSAxMDMgMjc5LjUgMjc5LjUgMTAzIDM4NS41eiIvPjwvc3ZnPg=="
-                alt="github"
-                className="github-icon"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
               className="email"
               href="mailto:shini.g.ko@gmail.com"
             >
@@ -118,6 +106,20 @@ class Contact extends Component {
                 src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiBoZWlnaHQ9IjI0cHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTExLjk4NCwxM0MxMC4wMzEsMTMtMC4wMzEsNC44OTEtMC4wMzEsNC44OTFWNGMwLTEuMTA0LDAuODk2LTIsMi4wMDItMmgyMC4wMjYgIEMyMy4xMDQsMiwyNCwyLjg5NiwyNCw0bC0wLjAxNiwxQzIzLjk4NCw1LDE0LjAzMSwxMywxMS45ODQsMTN6IE0xMS45ODQsMTUuNzVjMi4xNDEsMCwxMi03Ljc1LDEyLTcuNzVMMjQsMjAgIGMwLDEuMTA0LTAuODk2LDItMi4wMDMsMkgxLjk3MWMtMS4xMDUsMC0yLjAwMi0wLjg5Ni0yLjAwMi0ybDAuMDE2LTEyQy0wLjAxNiw4LDEwLjAzMSwxNS43NSwxMS45ODQsMTUuNzV6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4="
                 alt="email"
                 className="email-icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              className="github"
+              href="https://github.com/koshini"
+            >
+              <GithubIcon
+                src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIxNzkyIiB2aWV3Qm94PSIwIDAgMTc5MiAxNzkyIiB3aWR0aD0iMTc5MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTY2NCA4OTZxMCAyNTEtMTQ2LjUgNDUxLjV0LTM3OC41IDI3Ny41cS0yNyA1LTM5LjUtN3QtMTIuNS0zMHYtMjExcTAtOTctNTItMTQyIDU3LTYgMTAyLjUtMTh0OTQtMzkgODEtNjYuNSA1My0xMDUgMjAuNS0xNTAuNXEwLTEyMS03OS0yMDYgMzctOTEtOC0yMDQtMjgtOS04MSAxMXQtOTIgNDRsLTM4IDI0cS05My0yNi0xOTItMjZ0LTE5MiAyNnEtMTYtMTEtNDIuNS0yN3QtODMuNS0zOC41LTg2LTEzLjVxLTQ0IDExMy03IDIwNC03OSA4NS03OSAyMDYgMCA4NSAyMC41IDE1MHQ1Mi41IDEwNSA4MC41IDY3IDk0IDM5IDEwMi41IDE4cS00MCAzNi00OSAxMDMtMjEgMTAtNDUgMTV0LTU3IDUtNjUuNS0yMS41LTU1LjUtNjIuNXEtMTktMzItNDguNS01MnQtNDkuNS0yNGwtMjAtM3EtMjEgMC0yOSA0LjV0LTUgMTEuNSA5IDE0IDEzIDEybDcgNXEyMiAxMCA0My41IDM4dDMxLjUgNTFsMTAgMjNxMTMgMzggNDQgNjEuNXQ2NyAzMCA2OS41IDcgNTUuNS0zLjVsMjMtNHEwIDM4IC41IDg5dC41IDU0cTAgMTgtMTMgMzB0LTQwIDdxLTIzMi03Ny0zNzguNS0yNzcuNXQtMTQ2LjUtNDUxLjVxMC0yMDkgMTAzLTM4NS41dDI3OS41LTI3OS41IDM4NS41LTEwMyAzODUuNSAxMDMgMjc5LjUgMjc5LjUgMTAzIDM4NS41eiIvPjwvc3ZnPg=="
+                alt="github"
+                className="github-icon"
               />
             </a>
           </li>

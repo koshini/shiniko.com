@@ -422,8 +422,8 @@ const galleryImages = {
 
   9: {
     image1: {
-      name: 'camel guide',
-      src: '/assets/shiniko-34.jpg',
+      name: '',
+      src: '',
       styles: {
         position: 'center center',
         layer: 'base',

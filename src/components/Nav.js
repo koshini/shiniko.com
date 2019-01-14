@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Contact from './Contact';
+import NavTag from './styles/NavTag';
 
 const OuterNav = styled.div`
-  font-size: 2.4rem;
+  font-size: 3vmin;
   font-weight: 700;
-  padding: 48px 64px;
+  padding: 6vh 6vw;
   text-transform: uppercase;
   position: fixed;
   z-index: 999;
@@ -46,37 +46,6 @@ const OuterNavBottom = styled.div`
   display: flex;
 `;
 
-const NavElement = ({ className, children, url }) => (
-  <Link className={className} to={url}>
-    {children}
-  </Link>
-);
-
-const NavTag = styled(NavElement)`
-  letter-spacing: 0.1em;
-
-  &:before {
-    content: '';
-    height: 0.5rem;
-    background: ${props => props.theme.black};
-    width: 100%;
-    position: absolute;
-    bottom: -0.8rem;
-    display: block;
-    margin: 0 auto;
-    opacity: 0;
-    transition: all 0.4s ease-out;
-  }
-
-  &:hover:before {
-    opacity: 1;
-  }
-
-  /* &:hover {
-    color: ${props => props.theme.black};
-  } */
-`;
-
 const AboutTag = styled(NavTag)`
   position: absolute;
   right: 0;
@@ -90,14 +59,6 @@ const NameTag = styled(NavTag)`
   bottom: 0;
   transform: rotate(-90deg);
   transform-origin: bottom left;
-`;
-
-const ContactTag = styled.div`
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  transform: rotate(90deg);
-  transform-origin: bottom right;
 `;
 
 const ProjectsTag = styled(NavTag)`

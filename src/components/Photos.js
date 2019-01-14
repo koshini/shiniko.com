@@ -14,39 +14,35 @@ const Wrapper = styled.div`
 
 const ParallaxGroup = styled.div`
   max-width: 1800px;
-  width: calc(100% - 2 * 100px);
+  width: calc(100% - 2 * 10vw);
   position: relative;
   margin: 0 auto;
   top: 70px;
   height: 200vh;
-  margin-bottom: 100px;
   transform-style: preserve-3d;
 `;
 
 const TextContainer = styled.div`
   position: relative;
   height: 100%;
-  width: calc(100% - 2 * 100px);
-  max-width: ${props => props.theme.maxWidth};
+  max-width: calc(100% - 2 * 12vw);
+  width: auto;
   margin: 0 auto;
   top: 50vh;
   z-index: 10;
 
   ul {
-    position: absolute;
-    width: 100%;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
 
     li {
-      height: 300vh;
+      height: 250vh;
       text-align: left;
       font-size: 3.6vmin;
-      position: relative;
       list-style: none;
 
-      > p {
-        padding: 20px;
+      > span {
+        padding: 0.2em;
         color: ${props => props.theme.offWhite};
         background-color: ${props => props.theme.black};
       }
@@ -79,35 +75,35 @@ class Photos extends Component {
         <TextContainer>
           <ul>
             <li>
-              <p>There is nothing that brings me more joy than creating.</p>
+              <span>You crave change.</span>
             </li>
             <li>
-              <p>
-                I yearn for beauty in all forms; I want to blend art,
-                engineering together to break any stereotypical boundary.
-              </p>
+              <span>You travel.</span>
             </li>
             <li>
-              <p>
-                My creative outlets include coding, film photography, painting
-                and so on.
-              </p>
+              <span>You move.</span>
             </li>
             <li>
-              <p>
-                I believe that the notion of creativity extends beyond creating
-                art, and can be expressed through programming and problem
-                solving.
-              </p>
+              <span>This is new, you say.</span>
             </li>
             <li>
-              <p>
-                This website is not a portfolio or blog. It is a space where I
-                share some of my creations and ideas.
-              </p>
+              <span>
+                Weeks turn into months, <br />
+                turn into routines, <br />
+                turn into same old cycles.
+              </span>
             </li>
             <li>
-              <p>Enjoy :)</p>
+              <span>
+                No matter where you go, <br />
+                there is one thing that sticks with you - your mind.
+              </span>
+            </li>
+            <li>
+              <span>
+                If you truly want change, <br />
+                you have to change how you think.
+              </span>
             </li>
           </ul>
         </TextContainer>

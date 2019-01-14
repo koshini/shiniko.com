@@ -8,7 +8,7 @@ import Photos from './Photos';
 import Grain from './Grain';
 
 const theme = {
-  black: '#222222',
+  black: '#1e1e1e',
   grey: '#3A3A3A',
   lightgrey: '#E1E1E1',
   offWhite: '#fbf8f8',
