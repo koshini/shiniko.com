@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import Nav from './Nav';
 import LandingPage from './LandingPage';
 import About from './About';
 import Photos from './Photos';
-import Grain from './Grain';
 
 const theme = {
   black: '#1e1e1e',

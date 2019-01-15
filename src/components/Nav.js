@@ -23,8 +23,6 @@ const OuterNav = styled.div`
   /* color: transparent; */
 
   > * {
-    /* -webkit-text-stroke: 1px ${props => props.theme.black};
-    color: transparent; */
     pointer-events: auto;
     position: relative;
   }
@@ -71,7 +69,7 @@ const ProjectsTag = styled(NavTag)`
 class Nav extends Component {
   render() {
     return (
-      <OuterNav className="OuterNav">
+      <OuterNav className="outer-nav">
         <OuterNavTop>
           <ProjectsTag className="projects" url="/projects">
             Projects
@@ -81,7 +79,7 @@ class Nav extends Component {
           </AboutTag>
         </OuterNavTop>
         <OuterNavBottom>
-          <NameTag className="NameTag" url="/">
+          <NameTag className="name-tag" url="/">
             Shini Ko
           </NameTag>
           <Contact>Contact</Contact>

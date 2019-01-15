@@ -79,7 +79,7 @@ class Contact extends Component {
   render() {
     return (
       <ContactCard className="ContactCard">
-        <Connect className="connect">Connect</Connect>
+        <Connect className="connect">Contact</Connect>
         <ul>
           <li>
             <a

@@ -72,7 +72,7 @@ class Photos extends Component {
   render() {
     return (
       <Wrapper className="photo-gallery" onScroll={this.handleScroll}>
-        <TextContainer>
+        <TextContainer className="text-container">
           <ul>
             <li>
               <span>You crave change.</span>
