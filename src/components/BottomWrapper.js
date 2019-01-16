@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   bottom: 0;
   height: 100%;
   width: 100%;
-  background: #e98074;
+  background: ${props => props.theme.salmon};
   /* z-index: ${props => (props.zIndex ? -1 : 1)};   */
   /* z-index: ${props => (props.visible ? 1 : -1)}; */
   z-index: -1;

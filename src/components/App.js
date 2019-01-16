@@ -9,8 +9,12 @@ import Photos from './Photos';
 const theme = {
   black: '#1e1e1e',
   grey: '#3A3A3A',
-  lightgrey: '#E1E1E1',
+  lightgrey: '#BAB2B5',
   offWhite: '#fbf8f8',
+  flesh: 'F4DDD4',
+  mint: 'D1E8E2',
+  salmon: '#e98074',
+  forestGreen: '#376E6F',
   maxWidth: '1000px',
   padding: '32px',
   sidePadding: '100px'
@@ -30,9 +34,10 @@ body {
     margin: 0;
     font-size: 1.6rem;
     line-height: 1.8;
-    /* font-family: 'Ubuntu', sans-serif; */
+    /* font-family: 'Ubuntu Condensed', sans-serif; */
     /* font-family: 'Ubuntu Mono', monospace; */
     font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 0.1em;
   }
   a {
     text-decoration: none;

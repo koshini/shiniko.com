@@ -17,14 +17,7 @@ class Photo extends Component {
   };
 
   render() {
-    const {
-      position,
-      width,
-      layer,
-      containerHeight,
-      containerWidth,
-      xOffset
-    } = this.props.styles;
+    const { layer } = this.props.styles;
 
     const layerTransforms = {
       top: 'translateZ(-0.3px) scale(1)',
@@ -34,15 +27,12 @@ class Photo extends Component {
     };
 
     const PhotoWrapper = styled.div`
-      /* height: 50%;
-      width: 50%; */
       position: absolute;
       left: 0;
       right: 0;
       top: 0;
       bottom: 0;
       background-image: url(${this.props.src});
-      /* background-size: ${width} auto; */
       background-repeat: no-repeat;
       padding: 100vh 0;
       min-height: 100px;
@@ -50,34 +40,21 @@ class Photo extends Component {
     `;
 
     const ParallaxPhoto__top = styled(PhotoWrapper)`
-      /* border-color: black;qq
-      border-style: solid; */
       transform: ${layerTransforms[layer]};
       background-position: center top;
-      /* top: -10%; */
       background-size: 70vh auto;
-      /* left: auto; */
     `;
     const ParallaxPhoto__middle = styled(PhotoWrapper)`
       background-position: left center;
       transform: ${layerTransforms[layer]};
       background-size: 60vh auto;
-      /* bottom: -20%; */
     `;
     const ParallaxPhoto__bottom = styled(PhotoWrapper)`
       transform: ${layerTransforms[layer]};
       background-position: right center;
-      /* right: -10%; */
-      /* bottom: -60%; */
       background-size: 50vh auto;
     `;
     const ParallaxPhoto__base__even = styled(PhotoWrapper)`
-      /* border-color: red;
-      border-style: solid; */
-      /* bottom: 0; */
-      /* right: 0; */
-      /* left: auto; */
-      /* top: auto; */
       background-position: center center;
       background-size: 60vh auto;
       transform: ${layerTransforms[layer]};

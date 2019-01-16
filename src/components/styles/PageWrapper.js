@@ -9,11 +9,9 @@ const PageWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  background-color: ${props => (props.dark ? 'palevioletred' : 'white')};
+  background-color: ${props => props.backgroundColor || props.theme.lightgrey};
   > * {
     transform: translateY(-25vh);
-    width: calc(100% - 2 * 100px);
-    max-width: ${props => props.theme.maxWidth};
   }
 `;
 

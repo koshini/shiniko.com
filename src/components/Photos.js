@@ -20,6 +20,7 @@ const ParallaxGroup = styled.div`
   top: 70px;
   height: 200vh;
   transform-style: preserve-3d;
+  pointer-events: none;
 `;
 
 const TextContainer = styled.div`
@@ -42,7 +43,7 @@ const TextContainer = styled.div`
       list-style: none;
 
       > span {
-        padding: 0.2em;
+        padding: 0.2em 0.3em;
         color: ${props => props.theme.offWhite};
         background-color: ${props => props.theme.black};
       }
@@ -84,26 +85,28 @@ class Photos extends Component {
               <span>You move.</span>
             </li>
             <li>
-              <span>This is new, you say.</span>
-            </li>
-            <li>
               <span>
-                Weeks turn into months, <br />
-                turn into routines, <br />
-                turn into same old cycles.
+                This is <em>new</em>, you say.
               </span>
             </li>
             <li>
-              <span>
-                No matter where you go, <br />
-                there is one thing that sticks with you - your mind.
-              </span>
+              <span>Weeks turn into months, </span>
+              <br />
+              <span>turn into routines, </span>
+              <br />
+              <span>turn into same old cycles.</span>
+            </li>
+            <li>
+              <span>No matter where you go, </span>
+              <br />
+              <span>there is one thing that sticks with you - your mind.</span>
             </li>
             <li>
               <span>
-                If you truly want change, <br />
-                you have to change how you think.
+                If you truly want <em>change</em>,
               </span>
+              <br />
+              <span>you have to change how you think.</span>
             </li>
           </ul>
         </TextContainer>
