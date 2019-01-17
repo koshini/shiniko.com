@@ -7,7 +7,7 @@ import ContentWrapper from './styles/ContentWrapper';
 const Strong = styled.strong`
   font-size: 2em;
   font-weight: 700;
-  -webkit-text-stroke: 0.03em ${props => props.theme.offWhite};
+  -webkit-text-stroke: 0.03em ${props => props.theme.black};
   color: transparent;
 `;
 

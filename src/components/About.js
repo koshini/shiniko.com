@@ -25,7 +25,7 @@ class About extends Component {
     return (
       <React.Fragment>
         <PageWrapper backgroundColor={props => props.theme.forestGreen}>
-          <ContentWrapper>
+          <ContentWrapper textColor={props => props.theme.offWhite}>
             <div>
               <p>
                 There is nothing that brings me more joy in life than creating.
@@ -34,9 +34,9 @@ class About extends Component {
                 Growing up, I have always wanted to be an artist or a designer,
                 and spent countless hours on sketching and painting. I chose to
                 pursue a degree in Applied Mathematic and Engineering mesmerized
-                by mathematics and driven by my interests in problem solving.
-                However, programming was one of the last things I wanted to do.
-                The preconceived notion of the industry had turned me off. A few
+                by mathematics and driven by affinity to design. However,
+                programming was one of the last things I wanted to do. The
+                preconceived notion of the industry had turned me off. A few
                 years ago, I stumbled upon coding for the very first time, and I
                 was hooked. Nowadays, I lose track of time while tinkering on my
                 computer. Coding has become one of my creative outlets and a
@@ -51,18 +51,17 @@ class About extends Component {
             </div>
           </ContentWrapper>
         </PageWrapper>
-        <PageWrapper>
+        <PageWrapper last>
           <ContentWrapper>
             <p>
               I grew up in different countries and have lived in Japan, China
               and Canada for roughly 1/3 of my life each so far. Living in
-              different countries and forever being an outsider - bing bombarded
-              by cultural shocks starting at a young age - has made me develop a
-              unique world outlook. I believe that culture and traditions are
-              merely make-believes, and common sense is not at all common. I
-              constantly question why we do what we do. How come something that
-              is right in some parts of the world is awfully wrong in other
-              parts? How should I live my life then?
+              different countries –– bing bombarded by cultural shocks starting
+              at a young age –– has made me develop a unique world outlook. I
+              realized that common sense is not at all common, and traditions
+              are merely make-believes. I constantly question why we do what we
+              do. How come something that is right in some parts of the world is
+              awfully wrong in other parts? How should I live my life then?
             </p>
           </ContentWrapper>
         </PageWrapper>

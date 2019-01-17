@@ -20,7 +20,6 @@ const OuterNav = styled.div`
   justify-content: space-between;
   height: 100vh;
   box-sizing: border-box;
-  /* color: transparent; */
 
   > * {
     pointer-events: auto;

@@ -3,23 +3,17 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   opacity: ${props => (props.visible ? 1 : 0)};
-  /* opacity: 1; */
   position: absolute;
   bottom: 0;
   height: 100%;
   width: 100%;
   background: ${props => props.theme.salmon};
-  /* z-index: ${props => (props.zIndex ? -1 : 1)};   */
-  /* z-index: ${props => (props.visible ? 1 : -1)}; */
   z-index: -1;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: opacity 2s ease-out;
-
-  * > {
-  }
 `;
 
 class BottomWrapper extends Component {

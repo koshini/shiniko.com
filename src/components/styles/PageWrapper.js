@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const PageWrapper = styled.div`
   width: 100vw;
-  height: 150vh;
+  height: ${props => (props.last ? '100vh' : '150vh')};
   display: flex;
   position: sticky;
   top: 0;
@@ -11,7 +11,8 @@ const PageWrapper = styled.div`
   align-content: center;
   background-color: ${props => props.backgroundColor || props.theme.lightgrey};
   > * {
-    transform: translateY(-25vh);
+    transform: ${props =>
+      props.last ? 'translateY(0)' : 'translateY(-25vh);'};
   }
 `;
 

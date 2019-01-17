@@ -5,15 +5,16 @@ import Nav from './Nav';
 import LandingPage from './LandingPage';
 import About from './About';
 import Photos from './Photos';
+import Projects from './Projects';
 
 const theme = {
   black: '#1e1e1e',
   grey: '#3A3A3A',
   lightgrey: '#BAB2B5',
   offWhite: '#fbf8f8',
-  flesh: 'F4DDD4',
-  mint: 'D1E8E2',
-  salmon: '#e98074',
+  flesh: '#F4DDD4',
+  mint: '#D1E8E2',
+  salmon: '#EF9E8C',
   forestGreen: '#376E6F',
   maxWidth: '1000px',
   padding: '32px',
@@ -58,6 +59,7 @@ class App extends Component {
               <Route exact path="/" component={LandingPage} />
               <Route exact path="/about" component={About} />
               <Route exact path="/photos" component={Photos} />
+              <Route exact path="/projects" component={Projects} />
             </Switch>
             {/* </GlobalStyles> */}
           </React.Fragment>
