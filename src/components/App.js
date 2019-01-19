@@ -18,8 +18,8 @@ const theme = {
   salmon: '#EF9E8C',
   forestGreen: '#376E6F',
   maxWidth: '1200px',
-  padding: '32px',
-  sidePadding: '100px'
+  sidePadding: '100px',
+  mobileBreakpoint: '425px'
 };
 
 const GlobalStyles = createGlobalStyle`
@@ -43,6 +43,12 @@ body {
   a {
     text-decoration: none;
     color: ${theme.black};
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
   }
 `;
 

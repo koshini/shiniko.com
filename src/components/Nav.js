@@ -1,90 +1,15 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Contact from './Contact';
-import NavTag from './styles/NavTag';
-
-const OuterNav = styled.div`
-  font-size: 2vmin;
-  font-weight: 700;
-  padding: 10vh 4vw;
-  text-transform: uppercase;
-  position: fixed;
-  z-index: 999;
-  pointer-events: none;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
-  box-sizing: border-box;
-
-  > * {
-    pointer-events: auto;
-    position: relative;
-  }
-`;
-
-const OuterNavTop = styled.div`
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  display: flex;
-`;
-
-const OuterNavBottom = styled.div`
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  display: flex;
-`;
-
-const AboutTag = styled(NavTag)`
-  position: absolute;
-  right: 0;
-  transform: rotate(-90deg);
-  transform-origin: top right;
-`;
-
-const NameTag = styled(NavTag)`
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  transform: rotate(-90deg);
-  transform-origin: bottom left;
-`;
-
-const ProjectsTag = styled(NavTag)`
-  position: absolute;
-  left: 0;
-  transform: rotate(90deg);
-  transform-origin: top left;
-`;
+import MobileNav from './MobileNav';
+import OuterNav from './OuterNav';
 
 class Nav extends Component {
   render() {
-    return (
-      <OuterNav className="outer-nav">
-        <OuterNavTop>
-          <ProjectsTag className="projects" url="/projects">
-            Projects
-          </ProjectsTag>
-          <AboutTag className="about" url="/about">
-            About
-          </AboutTag>
-        </OuterNavTop>
-        <OuterNavBottom>
-          <NameTag className="name-tag" url="/">
-            Shini Ko
-          </NameTag>
-          <Contact>Contact</Contact>
-        </OuterNavBottom>
-      </OuterNav>
-    );
+    if (window.innerWidth > 425 && window.innerHeight > 650) {
+      return <OuterNav />;
+    } else {
+      return <MobileNav />;
+    }
   }
 }
 export default Nav;

@@ -5,15 +5,28 @@ import PageContainer from './styles/PageContainer';
 
 const ProjectGrid = styled(ContentWrapper)`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
-  grid-gap: 4rem calc(1rem + 2vw);
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   padding: 10vh 0;
+  grid-template-columns: (1fr);
+  grid-gap: 5vh;
+
+  @media (min-width: ${props => props.theme.mobileBreakpoint}) {
+    grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
+    grid-gap: 4rem calc(1rem + 2vw);
+    font-size: 1.6rem;
+    padding: 10vh 0;
+  }
 `;
 
 const GridElement = styled.div`
   height: 80vh;
   position: relative;
+  min-height: 100px;
+
+  @media (min-width: ${props => props.theme.mobileBreakpoint}) {
+    max-height: 1000px;
+    min-height: 750px;
+  }
 `;
 
 const Project = styled.a`
@@ -53,12 +66,10 @@ const ProjectContent = styled.div`
 
   h2 {
     margin: 0 0 0.1em 0;
-    font-family: 'Ubuntu Condensed', sans-serif;
   }
 
   h4 {
     margin: 0 0 3em 0;
-    font-family: 'Ubuntu Condensed', sans-serif;
   }
 
   p {
@@ -71,19 +82,20 @@ const ProjectContent = styled.div`
     width: 10em;
     text-transform: uppercase;
     padding: 1.25em 2.5em;
-    margin-top: 3em;
     border: 2px solid ${props => props.theme.offWhite};
     background-color: transparent;
     cursor: pointer;
 
-    &:hover {
+    &:hover,
+    :focus {
       transition: all 0.2s ease-in-out;
       background-color: ${props => props.theme.offWhite};
       color: ${props => props.theme.black};
     }
   }
 
-  &:hover {
+  &:hover,
+  :focus {
     transition: all 0.3s cubic-bezier(0.5, 0.12, 0.24, 1.45);
     justify-content: center;
     transform: scale(1.1);

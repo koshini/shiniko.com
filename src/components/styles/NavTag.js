@@ -1,16 +1,15 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import React from 'react';
 
 const NavElement = ({ className, children, url }) => (
-  <Link className={className} to={url}>
+  <NavLink className={className} to={url}>
     <div>{children}</div>
-  </Link>
+  </NavLink>
 );
 
 const NavTag = styled(NavElement)`
   letter-spacing: 0.1em;
-
 
   &:before {
     content: '';
@@ -27,9 +26,7 @@ const NavTag = styled(NavElement)`
 
   &:hover:before {
     opacity: 1;
-    /* transform: translateY(-2rem); */
     bottom: 3rem;
-
   }
 
   /* div {
