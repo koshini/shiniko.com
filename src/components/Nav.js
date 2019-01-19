@@ -4,9 +4,9 @@ import Contact from './Contact';
 import NavTag from './styles/NavTag';
 
 const OuterNav = styled.div`
-  font-size: 3vmin;
+  font-size: 2vmin;
   font-weight: 700;
-  padding: 6vh 6vw;
+  padding: 10vh 4vw;
   text-transform: uppercase;
   position: fixed;
   z-index: 999;

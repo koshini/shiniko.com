@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Connect = styled.div`
   width: 100%;
-  margin-right: 3rem;
+  margin-left: 3rem;
 `;
 
 const ContactCard = styled.div`
@@ -12,6 +12,7 @@ const ContactCard = styled.div`
   bottom: 0;
   right: 0;
   display: flex;
+  flex-direction: row-reverse;
   transform: rotate(90deg);
   transform-origin: bottom right;
   pointer-events: auto;
@@ -22,41 +23,40 @@ const ContactCard = styled.div`
 
   &:before {
     content: '';
-    height: 0.5rem;
+    height: 0.3rem;
     background: ${props => props.theme.black};
     width: 100%;
+    bottom: -1rem;
     position: absolute;
-    bottom: -0.8rem;
     display: block;
     margin: 0 auto;
     opacity: 0;
-    transition: all 0.4s ease-out;
+    transition: all 0.2s ease-in-out;
   }
 
   &:hover:before {
     opacity: 1;
+    bottom: 3rem;
   }
 
-  > ul {
-    /* transform: rotate(180deg); */
+  ul {
     list-style: none;
     width: 100%;
     margin: auto;
     padding: 0;
 
-    > li {
+    li {
       flex: 1;
       width: 1em;
-      /* transform: rotate(180deg); */
       margin-right: 1rem;
       display: inline-flex;
       transform: translateY(3px);
 
-      > a {
-        > img {
+      a {
+        img {
           max-width: 100%;
           height: auto;
-          display: block;
+          display: inline-block;
         }
       }
     }
@@ -64,15 +64,25 @@ const ContactCard = styled.div`
 `;
 
 const LinkedinIcon = styled.img`
-  width: 100%;
+  transform: scale(1.2);
+
+  &:hover {
+    transform: scale(1.6);
+  }
 `;
 
 const GithubIcon = styled.img`
-  width: 95%;
+  transform: scale(1.1);
+  &:hover {
+    transform: scale(1.5);
+  }
 `;
 
 const EmailIcon = styled.img`
-  width: 90%;
+  transform: scale(0.9);
+  &:hover {
+    transform: scale(1.3);
+  }
 `;
 
 class Contact extends Component {

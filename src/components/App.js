@@ -6,6 +6,7 @@ import LandingPage from './LandingPage';
 import About from './About';
 import Photos from './Photos';
 import Projects from './Projects';
+import Now from './Now';
 
 const theme = {
   black: '#1e1e1e',
@@ -16,7 +17,7 @@ const theme = {
   mint: '#D1E8E2',
   salmon: '#EF9E8C',
   forestGreen: '#376E6F',
-  maxWidth: '1000px',
+  maxWidth: '1200px',
   padding: '32px',
   sidePadding: '100px'
 };
@@ -35,7 +36,6 @@ body {
     margin: 0;
     font-size: 1.6rem;
     line-height: 1.8;
-    /* font-family: 'Ubuntu Condensed', sans-serif; */
     /* font-family: 'Ubuntu Mono', monospace; */
     font-family: 'Ubuntu', sans-serif;
     letter-spacing: 0.1em;
@@ -58,6 +58,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={LandingPage} />
               <Route exact path="/about" component={About} />
+              <Route path="/about/now" component={Now} />
               <Route exact path="/photos" component={Photos} />
               <Route exact path="/projects" component={Projects} />
             </Switch>

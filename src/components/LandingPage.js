@@ -29,7 +29,7 @@ class LandingPage extends Component {
           <ContentWrapper className="intro">
             <p>
               <Strong>Hey, this is Shini Ko, </Strong>
-              <br />a software developer, art lover, and travel freak. I'm
+              <br />a software developer, an art lover, and a travel freak. I'm
               fueled by my desire to create. I believe that the notion of
               creativity extends beyond creating art, and can be expressed
               through programming and problem solving. When I'm not coding, I
