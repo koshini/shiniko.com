@@ -25,14 +25,6 @@ const Wrapper = styled.div`
     pointer-events: auto;
     position: relative;
   }
-
-  @media (max-width: 425px) {
-    display: none;
-  }
-
-  @media (max-height: 650px) {
-    display: none;
-  }
 `;
 
 const OuterNavTop = styled.div`
@@ -89,7 +81,7 @@ class OuterNav extends Component {
           <NameTag className="home" url="/">
             Shini Ko
           </NameTag>
-          <Contact>Contact</Contact>
+          <Contact>Connect</Contact>
         </OuterNavBottom>
       </Wrapper>
     );

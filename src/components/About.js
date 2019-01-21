@@ -5,10 +5,10 @@ import PageContainer from './styles/PageContainer';
 
 const Now = styled.div`
   transition: all 0.2s ease-in;
-  margin-top: 6rem;
+  margin-top: 3rem;
   a {
-    color: ${props => props.theme.grey};
-    font-size: 1.8rem;
+    font-size: calc(1rem + 0.6vw);
+    font-style: oblique;
   }
   &:hover {
     opacity: 0.6;

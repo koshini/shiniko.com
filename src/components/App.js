@@ -14,10 +14,11 @@ const theme = {
   lightgrey: '#BAB2B5',
   offWhite: '#fbf8f8',
   flesh: '#F4DDD4',
-  mint: '#D1E8E2',
+  // mint: '#D1E8E2',
+  mint: '#BFD8D2',
   salmon: '#EF9E8C',
   forestGreen: '#376E6F',
-  maxWidth: '1200px',
+  maxWidth: '1000px',
   sidePadding: '100px',
   mobileBreakpoint: '425px'
 };
@@ -39,6 +40,13 @@ body {
     /* font-family: 'Ubuntu Mono', monospace; */
     font-family: 'Ubuntu', sans-serif;
     letter-spacing: 0.1em;
+    font-size: 1.2rem;
+
+    @media (min-width: 425px) {
+    font-size: 1.6rem;
+
+    }
+
   }
   a {
     text-decoration: none;
@@ -49,6 +57,10 @@ body {
     list-style: none;
     padding: 0;
     margin: 0 auto;
+  }
+
+  li {
+    list-style: none;
   }
 `;
 

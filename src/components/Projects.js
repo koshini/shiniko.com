@@ -5,15 +5,15 @@ import PageContainer from './styles/PageContainer';
 
 const ProjectGrid = styled(ContentWrapper)`
   display: grid;
-  font-size: 1.2rem;
   padding: 10vh 0;
   grid-template-columns: (1fr);
   grid-gap: 5vh;
+  padding: 0;
+  max-width: 1200px;
 
   @media (min-width: ${props => props.theme.mobileBreakpoint}) {
     grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
     grid-gap: 4rem calc(1rem + 2vw);
-    font-size: 1.6rem;
     padding: 10vh 0;
   }
 `;

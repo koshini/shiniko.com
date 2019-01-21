@@ -39,7 +39,7 @@ const TextContainer = styled.div`
     li {
       height: 250vh;
       text-align: left;
-      font-size: 3.6vmin;
+      font-size: 2.4rem;
       list-style: none;
 
       > span {

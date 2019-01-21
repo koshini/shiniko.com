@@ -12,6 +12,7 @@ const Toggle = styled.div`
   transition: 0.5s ease-in-out;
   cursor: pointer;
   z-index: 999;
+  pointer-events: auto;
 
   span {
     display: block;
@@ -24,6 +25,10 @@ const Toggle = styled.div`
     transform: rotate(0deg);
     transition: 0.25s ease-in-out;
 
+    &:nth-child(1) {
+      width: ${props => (props.isOpen ? 0 : `100%`)};
+    }
+
     &:nth-child(2) {
       top: 6px;
       transform: ${props => (props.isOpen ? `rotate(45deg)` : 'rotate(0deg)')};
@@ -31,17 +36,24 @@ const Toggle = styled.div`
 
     &:nth-child(3) {
       top: 6px;
+      transform: ${props => (props.isOpen ? `rotate(-45deg)` : 'rotate(0deg)')};
     }
 
     &:nth-child(4) {
       top: 12px;
+      width: ${props => (props.isOpen ? 0 : `100%`)};
     }
   }
 `;
+
 class ToggleNav extends Component {
   render() {
     return (
-      <Toggle isOpen={this.props.isOpen}>
+      <Toggle
+        className="toggle"
+        onClick={this.props.toggleNav}
+        isOpen={this.props.isOpen}
+      >
         <span />
         <span />
         <span />
