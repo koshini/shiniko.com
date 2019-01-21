@@ -1,1 +1,1 @@
-# shiniko.com
+Personal website made in React!
