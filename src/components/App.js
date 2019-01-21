@@ -18,12 +18,13 @@ const theme = {
   mint: '#BFD8D2',
   salmon: '#EF9E8C',
   forestGreen: '#376E6F',
-  maxWidth: '1000px',
+  maxWidth: '800px',
   sidePadding: '100px',
   mobileBreakpoint: '425px'
 };
 
 const GlobalStyles = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Condensed|Ubuntu+Mono');
 html {
   box-sizing: border-box;
   font-size: 10px;
@@ -32,7 +33,6 @@ html {
   box-sizing: inherit;
 }
 body {
-    @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Condensed|Ubuntu+Mono');
     padding: 0;
     margin: 0;
     font-size: 1.6rem;

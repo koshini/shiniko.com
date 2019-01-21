@@ -10,6 +10,7 @@ const ProjectGrid = styled(ContentWrapper)`
   grid-gap: 5vh;
   padding: 0;
   max-width: 1200px;
+  font-size: 1.6rem;
 
   @media (min-width: ${props => props.theme.mobileBreakpoint}) {
     grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));

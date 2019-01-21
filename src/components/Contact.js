@@ -44,13 +44,13 @@ const ContactCard = styled.div`
     width: 100%;
     margin: auto;
     padding: 0;
+    transform: translateY(3px);
 
     li {
       flex: 1;
       width: 1em;
       margin-right: 1rem;
       display: inline-flex;
-      /* transform: translateY(3px); */
 
       a {
         img {

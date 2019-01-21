@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import ContentWrapper from './styles/ContentWrapper';
 import PageContainer from './styles/PageContainer';
 
-const Now = styled.div`
+const CustomLink = ({ className, children, url }) => (
+  <Link className={className} to={url} activeStyle={{}}>
+    <div>{children}</div>
+  </Link>
+);
+
+const Now = styled(CustomLink)`
   transition: all 0.2s ease-in;
   margin-top: 3rem;
-  a {
-    font-size: calc(1rem + 0.6vw);
+  p {
     font-style: oblique;
+    text-decoration: underline;
   }
   &:hover {
     opacity: 0.6;
@@ -51,9 +58,9 @@ class About extends Component {
                 boundary between the two.
               </p>
             </div>
-            <Now className="now-link">
-              <a href="/about/now"> What am I up to now? </a>
-            </Now>
+            {/* <Now className="now" url="/about/now">
+              <p> What am I up to now? </p>
+            </Now> */}
           </ContentWrapper>
         </PageContainer>
       </React.Fragment>
