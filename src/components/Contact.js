@@ -49,7 +49,7 @@ const ContactCard = styled.div`
     li {
       flex: 1;
       width: 1em;
-      margin-right: 1rem;
+      margin: 0 1.5rem;
       display: inline-flex;
 
       a {
@@ -67,7 +67,7 @@ class Contact extends Component {
   render() {
     return (
       <ContactCard className="ContactCard">
-        <Connect className="connect">Contact</Connect>
+        {/* <Connect className="connect">Contact</Connect> */}
         <SocialIcons />
       </ContactCard>
     );

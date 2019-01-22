@@ -129,12 +129,12 @@ class Projects extends Component {
                 <h2>Comme Unité</h2>
                 <h4>A Brand</h4>
                 <p>
-                  I, along with a friend, started Comme Unité to collaborate
-                  with emerging artists to create quality clothing products. We
-                  are building a platform that empowers artists to execute their
-                  ideas and connect with wider audiences. The goal is to create
-                  a bridge between artists and their fans by removing barriers
-                  between ideation and production.
+                  I co-founded Comme Unité to collaborate with emerging artists
+                  to create quality clothing products. We are building a
+                  platform that empowers artists to execute their ideas and
+                  connect with wider audiences. The goal is to create a bridge
+                  between artists and their fans by removing barriers between
+                  ideation and production.
                 </p>
                 <button>Explore</button>
               </ProjectContent>
@@ -183,7 +183,7 @@ class Projects extends Component {
                   the random walk model, such as the fluctuation of stock price.
                 </p>
                 <p>
-                  I made a simple visualization of this process in a 2D plane.
+                  I made a simple visualization of this process on a 2D plane.
                 </p>
                 <button>Explore</button>
               </ProjectContent>

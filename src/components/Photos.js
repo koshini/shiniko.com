@@ -63,7 +63,7 @@ class Photos extends Component {
       height = child.offsetHeight + height;
     });
 
-    if (e.target.scrollTop >= height + 1000) {
+    if (e.target.scrollTop >= height + 400) {
       this.props.toggleBottomVisibility(true);
     } else {
       this.props.toggleBottomVisibility(false);
@@ -92,9 +92,9 @@ class Photos extends Component {
             <li>
               <span>Weeks turn into months, </span>
               <br />
-              <span>turn into routines, </span>
+              <span>into routines, </span>
               <br />
-              <span>turn into same old cycles.</span>
+              <span>into same old cycles.</span>
             </li>
             <li>
               <span>No matter where you go, </span>
