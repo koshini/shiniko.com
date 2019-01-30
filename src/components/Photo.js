@@ -32,7 +32,9 @@ class Photo extends Component {
       right: 0;
       top: 0;
       bottom: 0;
-      background-image: url(${this.props.src});
+      background-image: url(${`https://res.cloudinary.com/shiniko/image/upload/q_auto,w_500/v1548814919/shiniko/${
+        this.props.src
+      }`});
       background-repeat: no-repeat;
       padding: 100vh 0;
       min-height: 100px;
@@ -40,12 +42,9 @@ class Photo extends Component {
     `;
 
     const ParallaxPhoto__top = styled(PhotoWrapper)`
-      @media (max-width: 425px) {
-        display: none;
-      }
       transform: ${layerTransforms[layer]};
       background-position: center top;
-      background-size: 70vh auto;
+      background-size: 70vmin auto;
     `;
     const ParallaxPhoto__middle = styled(PhotoWrapper)`
       @media (max-width: 425px) {
@@ -53,16 +52,16 @@ class Photo extends Component {
       }
       background-position: left center;
       transform: ${layerTransforms[layer]};
-      background-size: 60vh auto;
+      background-size: 60vmin auto;
     `;
     const ParallaxPhoto__bottom = styled(PhotoWrapper)`
       transform: ${layerTransforms[layer]};
       background-position: right center;
-      background-size: 50vh auto;
+      background-size: 50vmin auto;
     `;
     const ParallaxPhoto__base__even = styled(PhotoWrapper)`
       background-position: center center;
-      background-size: 60vh auto;
+      background-size: 60vmin auto;
       transform: ${layerTransforms[layer]};
     `;
 

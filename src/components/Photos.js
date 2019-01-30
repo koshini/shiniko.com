@@ -18,10 +18,14 @@ const ParallaxGroup = styled.div`
   width: calc(100% - 2 * 10vw);
   position: relative;
   margin: 0 auto;
-  top: 70px;
   height: 200vh;
   transform-style: preserve-3d;
   pointer-events: none;
+  top: -100vh;
+
+  @media (max-width: 425px) {
+    height: 100vh;
+  }
 `;
 
 const TextContainer = styled.div`
@@ -40,8 +44,12 @@ const TextContainer = styled.div`
     li {
       height: 250vh;
       text-align: left;
-      font-size: 2.4rem;
+      font-size: 2.8rem;
       list-style: none;
+      @media (max-width: 425px) {
+        height: 120vh;
+        font-size: 1.6rem;
+      }
 
       > span {
         padding: 0.2em 0.3em;
@@ -64,7 +72,7 @@ class Photos extends Component {
       height = child.offsetHeight + height;
     });
 
-    if (e.target.scrollTop >= height) {
+    if (e.target.scrollTop >= height - window.innerHeight) {
       this.props.toggleBottomVisibility(true);
     } else {
       this.props.toggleBottomVisibility(false);
@@ -114,7 +122,7 @@ class Photos extends Component {
         {Object.keys(galleryImages).map(group => (
           <ParallaxGroup className="parallax-group">
             {Object.keys(galleryImages[group]).map(item => (
-              <LazyLoad debounce={false} offsetVertical={900}>
+              <LazyLoad debounce={false} offsetVertical={window.innerHeight}>
                 <Photo
                   group={group}
                   src={galleryImages[group][item].src}
