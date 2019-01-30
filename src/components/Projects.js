@@ -97,15 +97,18 @@ const ProjectContent = styled.div`
 
   &:hover,
   :focus {
-    transition: all 0.3s cubic-bezier(0.5, 0.12, 0.24, 1.45);
-    justify-content: center;
-    transform: scale(1.1);
-    background-color: ${props => props.theme.black};
-    box-shadow: 0px 15px 30px 3px rgba(68, 68, 78, 0.7);
-
-    > * {
-      color: ${props => props.theme.offWhite};
+    @media (min-width: ${props => props.theme.mobileBreakpoint}) {
+      transform: scale(1.1);
+      transition: all 0.3s cubic-bezier(0.5, 0.12, 0.24, 1.45);
+      justify-content: center;
+      background-color: ${props => props.theme.black};
+      box-shadow: 0px 15px 30px 3px rgba(68, 68, 78, 0.7);
       display: inline-block;
+
+      > * {
+        color: ${props => props.theme.offWhite};
+        display: inline-block;
+      }
     }
   }
 `;
