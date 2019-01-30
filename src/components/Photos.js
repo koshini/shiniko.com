@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import LazyLoad from 'react-lazy-load';
 import galleryImages from '../images';
 import Photo from './Photo';
 
@@ -63,7 +64,7 @@ class Photos extends Component {
       height = child.offsetHeight + height;
     });
 
-    if (e.target.scrollTop >= height + 400) {
+    if (e.target.scrollTop >= height) {
       this.props.toggleBottomVisibility(true);
     } else {
       this.props.toggleBottomVisibility(false);
@@ -113,11 +114,13 @@ class Photos extends Component {
         {Object.keys(galleryImages).map(group => (
           <ParallaxGroup className="parallax-group">
             {Object.keys(galleryImages[group]).map(item => (
-              <Photo
-                group={group}
-                src={galleryImages[group][item].src}
-                styles={galleryImages[group][item].styles}
-              />
+              <LazyLoad debounce={false} offsetVertical={900}>
+                <Photo
+                  group={group}
+                  src={galleryImages[group][item].src}
+                  styles={galleryImages[group][item].styles}
+                />
+              </LazyLoad>
             ))}
           </ParallaxGroup>
         ))}

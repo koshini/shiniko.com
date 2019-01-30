@@ -40,11 +40,17 @@ class Photo extends Component {
     `;
 
     const ParallaxPhoto__top = styled(PhotoWrapper)`
+      @media (max-width: 425px) {
+        display: none;
+      }
       transform: ${layerTransforms[layer]};
       background-position: center top;
       background-size: 70vh auto;
     `;
     const ParallaxPhoto__middle = styled(PhotoWrapper)`
+      @media (max-width: 425px) {
+        display: none;
+      }
       background-position: left center;
       transform: ${layerTransforms[layer]};
       background-size: 60vh auto;
@@ -61,6 +67,9 @@ class Photo extends Component {
     `;
 
     const ParallaxPhoto__base_odd = styled(ParallaxPhoto__base__even)`
+      @media (max-width: 425px) {
+        display: none;
+      }
       transform: translateZ(-4px) scale(3);
       background-position: right center;
     `;
@@ -72,13 +81,13 @@ class Photo extends Component {
 
     switch (layer) {
       case 'top':
-        return <ParallaxPhoto__top />;
+        return <ParallaxPhoto__top className="top" />;
       case 'middle':
-        return <ParallaxPhoto__middle />;
+        return <ParallaxPhoto__middle className="middle" />;
       case 'bottom':
-        return <ParallaxPhoto__bottom />;
+        return <ParallaxPhoto__bottom className="bottom" />;
       default:
-        return <ParallaxPhoto__base />;
+        return <ParallaxPhoto__base className="base" />;
     }
   }
 }
