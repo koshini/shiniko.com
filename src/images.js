@@ -9,8 +9,8 @@ const galleryImages = {
         width: '70vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
+        xOffset: 0,
+      },
     },
 
     image2: {
@@ -22,8 +22,8 @@ const galleryImages = {
         width: '60vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
+        xOffset: 0,
+      },
     },
 
     image3: {
@@ -35,20 +35,9 @@ const galleryImages = {
         width: '50vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
+        xOffset: 0,
+      },
     },
-
-    image4: {
-      styles: {
-        position: 'center top',
-        layer: 'top',
-        width: '70vh',
-        containerWidth: '70vw',
-        containerHeight: '100vh',
-        xOffset: 0
-      }
-    }
   },
 
   2: {
@@ -61,8 +50,8 @@ const galleryImages = {
         width: '60vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
+        xOffset: 0,
+      },
     },
 
     image2: {
@@ -74,8 +63,8 @@ const galleryImages = {
         width: '60vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
+        xOffset: 0,
+      },
     },
 
     image3: {
@@ -87,8 +76,8 @@ const galleryImages = {
         width: '50vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
+        xOffset: 0,
+      },
     },
 
     image4: {
@@ -100,23 +89,12 @@ const galleryImages = {
         width: '60vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
-    }
+        xOffset: 0,
+      },
+    },
   },
 
   3: {
-    image1: {
-      styles: {
-        position: 'center center',
-        layer: 'base',
-        width: '40vh',
-        containerWidth: '70vw',
-        containerHeight: '100vh',
-        xOffset: 0
-      }
-    },
-
     image2: {
       name: 'chair',
       src: 'shiniko-7.jpg',
@@ -126,8 +104,8 @@ const galleryImages = {
         width: '60vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
+        xOffset: 0,
+      },
     },
 
     image3: {
@@ -139,8 +117,8 @@ const galleryImages = {
         width: '50vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
+        xOffset: 0,
+      },
     },
 
     image4: {
@@ -152,9 +130,9 @@ const galleryImages = {
         width: '60vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
-    }
+        xOffset: 0,
+      },
+    },
   },
 
   4: {
@@ -167,8 +145,8 @@ const galleryImages = {
         width: '40vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
+        xOffset: 0,
+      },
     },
 
     image2: {
@@ -180,19 +158,8 @@ const galleryImages = {
         width: '60vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
-    },
-
-    image3: {
-      styles: {
-        position: 'left center',
-        layer: 'bottom',
-        width: '50vh',
-        containerWidth: '70vw',
-        containerHeight: '100vh',
-        xOffset: 0
-      }
+        xOffset: 0,
+      },
     },
 
     image4: {
@@ -204,9 +171,9 @@ const galleryImages = {
         width: '60vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
-    }
+        xOffset: 0,
+      },
+    },
   },
 
   5: {
@@ -219,8 +186,8 @@ const galleryImages = {
         width: '40vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
+        xOffset: 0,
+      },
     },
 
     image2: {
@@ -232,8 +199,8 @@ const galleryImages = {
         width: '60vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
+        xOffset: 0,
+      },
     },
 
     image3: {
@@ -245,8 +212,8 @@ const galleryImages = {
         width: '50vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
+        xOffset: 0,
+      },
     },
 
     image4: {
@@ -258,23 +225,12 @@ const galleryImages = {
         width: '60vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
-    }
+        xOffset: 0,
+      },
+    },
   },
 
   6: {
-    image1: {
-      styles: {
-        position: 'center center',
-        layer: 'base',
-        width: '40vh',
-        containerWidth: '70vw',
-        containerHeight: '100vh',
-        xOffset: 0
-      }
-    },
-
     image2: {
       name: 'stairs',
       src: 'shiniko-25.jpg',
@@ -284,8 +240,8 @@ const galleryImages = {
         width: '60vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
+        xOffset: 0,
+      },
     },
 
     image3: {
@@ -297,8 +253,8 @@ const galleryImages = {
         width: '50vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
+        xOffset: 0,
+      },
     },
 
     image4: {
@@ -310,24 +266,12 @@ const galleryImages = {
         width: '60vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
-    }
+        xOffset: 0,
+      },
+    },
   },
 
   7: {
-    image1: {
-      styles: {
-        position: 'center center',
-        layer: 'base',
-        width: '40vh',
-
-        containerWidth: '70vw',
-        containerHeight: '100vh',
-        xOffset: 0
-      }
-    },
-
     image2: {
       name: 'morocco sky',
       src: 'shiniko-38.jpg',
@@ -337,8 +281,8 @@ const galleryImages = {
         width: '60vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
+        xOffset: 0,
+      },
     },
 
     image3: {
@@ -350,8 +294,8 @@ const galleryImages = {
         width: '50vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
+        xOffset: 0,
+      },
     },
 
     image4: {
@@ -363,9 +307,9 @@ const galleryImages = {
         width: '60vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
-    }
+        xOffset: 0,
+      },
+    },
   },
 
   8: {
@@ -378,8 +322,8 @@ const galleryImages = {
         width: '40vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
+        xOffset: 0,
+      },
     },
 
     image2: {
@@ -391,19 +335,8 @@ const galleryImages = {
         width: '60vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
-    },
-
-    image3: {
-      styles: {
-        position: 'right center',
-        layer: 'bottom',
-        width: '50vh',
-        containerWidth: '70vw',
-        containerHeight: '100vh',
-        xOffset: 0
-      }
+        xOffset: 0,
+      },
     },
 
     image4: {
@@ -415,25 +348,12 @@ const galleryImages = {
         width: '60vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
-    }
+        xOffset: 0,
+      },
+    },
   },
 
   9: {
-    image1: {
-      name: '',
-      src: '',
-      styles: {
-        position: 'center center',
-        layer: 'base',
-        width: '40vh',
-        containerWidth: '70vw',
-        containerHeight: '100vh',
-        xOffset: 0
-      }
-    },
-
     image2: {
       name: 'tote',
       src: 'shiniko-37.jpg',
@@ -443,8 +363,8 @@ const galleryImages = {
         width: '60vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
+        xOffset: 0,
+      },
     },
 
     image3: {
@@ -456,21 +376,10 @@ const galleryImages = {
         width: '50vh',
         containerWidth: '70vw',
         containerHeight: '100vh',
-        xOffset: 0
-      }
+        xOffset: 0,
+      },
     },
-
-    image4: {
-      styles: {
-        position: 'center top',
-        layer: 'top',
-        width: '60vh',
-        containerWidth: '70vw',
-        containerHeight: '100vh',
-        xOffset: 0
-      }
-    }
-  }
+  },
 };
 
 export default galleryImages;

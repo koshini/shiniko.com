@@ -12,8 +12,8 @@ class Photo extends Component {
       layer: PropTypes.string,
       containerWidth: PropTypes.string,
       containerHeight: PropTypes.string,
-      xOffset: PropTypes.number
-    })
+      xOffset: PropTypes.number,
+    }),
   };
 
   render() {
@@ -23,7 +23,7 @@ class Photo extends Component {
       top: 'translateZ(-0.3px) scale(1)',
       middle: 'translateZ(-1px) scale(2)',
       bottom: 'translateZ(-2px) scale(3)',
-      base: 'translateZ(-3px) scale(4)'
+      base: 'translateZ(-3px) scale(4)',
     };
 
     const PhotoWrapper = styled.div`
@@ -32,7 +32,7 @@ class Photo extends Component {
       right: 0;
       top: 0;
       bottom: 0;
-      background-image: url(${`https://res.cloudinary.com/shiniko/image/upload/q_auto,w_500/v1548814919/shiniko/${
+      background-image: url(${`https://res.cloudinary.com/shiniko/image/upload/q_auto,w_500/v1548852422/shiniko/${
         this.props.src
       }`});
       background-repeat: no-repeat;
